@@ -16,6 +16,27 @@
   --parag-color: #c19eed;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-purple);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--orange2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bright-orange);
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -264,6 +285,7 @@ body .about-us .aboutBtn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  min-width: 150px;
   display: block;
 }
 body .newsletter {
