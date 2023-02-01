@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #363636;
+  --dark-purple: #5d42d3;
+  --white: #ffffff;
+  --light-purple: #c4b6f8;
+  --bg-color: #f4f4f4;
+  --bright-orange: #ff845b;
+  --orange2: #fe774a;
+  --parag-color: #c19eed;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+body ul {
+  padding-left: 0 !important;
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body .bg-grey {
+  background-color: #f8f9fa;
+}
+body .header-area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body .header-area .nav-area {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+body .header-area .nav-area .logo {
+  width: 116px;
+  height: 35px;
+}
+body .header-area .nav-area .mobile-menu {
+  display: none;
+}
+body .header-area .nav-area .nav-list {
+  display: flex;
+  margin-bottom: 0;
+  padding-top: 6px;
+}
+body .header-area .nav-area .nav-list li {
+  padding-left: 25px;
+}
+body .header-area .nav-area .nav-list li a {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+  position: relative;
+}
+body .header-area .nav-area .nav-list li a:hover {
+  color: var(--dark-purple);
+}
+body .header-area .nav-area .nav-list li a.activeLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 2.3px;
+  bottom: -7px;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+body .header-area .nav-area .menu-trigger {
+  display: none;
+}
+body .cta {
+  color: #f4f4f4;
+  padding: 7px 34px;
+  font-size: 18px;
+  border-radius: 20px;
+  background: linear-gradient(to right, var(--dark-purple) 50%, #ff845b 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+body .cta:hover {
+  background-position: left bottom;
+}
+body .hero-section {
+  background: url(../images/banner1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .hero-section .hero-intro {
+  margin-top: 40px;
+}
+body .hero-section .hero-intro .hero-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 80px;
+  color: var(--black);
+  max-width: 600px;
+  margin-bottom: 70px;
+}
+body .services {
+  padding: 100px 0 200px;
+  background-color: var(--dark-purple);
+}
+body .services .services-title {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 70px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  max-width: 375px;
+}
+body .services .service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+}
+body .services .service img {
+  margin-bottom: 98px;
+  width: 35px;
+}
+body .services .service .service-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+}
+body .services .service .service-description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  color: #c4b6f8;
+  max-width: 95%;
+}
+body .services .second-services {
+  margin-top: 90px;
+}
+body .projects {
+  background-color: var(--black);
+  z-index: 1;
+}
+body .projects .projects-wrap {
+  transform: translateY(-120px);
+}
+body .projects .projects-wrap .portfolio-item {
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden;
+  border-radius: 0;
+}
+body .projects .projects-wrap .portfolio-item .img-fluid {
+  max-width: 100%;
+  width: 100%;
+  height: 260px;
+}
+body .projects .projects-wrap .portfolio-item .content-holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 200%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 210, 181, 0.6);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0 15px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.28s;
+}
+body .projects .projects-wrap .portfolio-item .content-holder .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+body .projects .projects-wrap .portfolio-item .content-holder .subtitle {
+  font-weight: 500;
+  opacity: 1;
+}
+body .projects .projects-wrap .portfolio-item:hover .content-holder {
+  left: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+body .projects .projects-wrap .projectsBtn {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 140px;
+}
+body .why-choose-us {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 120px 0 0;
+}
+body .why-choose-us .achievements-title {
+  font-weight: 800;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+body .why-choose-us .work {
+  text-align: center;
+  max-width: 320px;
+  margin: auto;
+}
+body .why-choose-us .work img {
+  margin-bottom: 25px;
+}
+body .why-choose-us .work .text {
+  font-weight: 300;
+  font-size: 18px;
+  color: #dadada;
+  line-height: 28px;
+}
+body .why-choose-us .work .subtext {
+  color: #08d7bd;
+}
+body .about-us {
+  margin: auto;
+  padding: 100px 0;
+}
+body .about-us .about-title {
+  font-weight: 800;
+  font-size: 48px;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+body .about-us .about-paragraph {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+body .about-us .aboutBtn {
+  text-align: center;
+  margin: auto;
+  max-width: 170px;
+  display: block;
+}
+body .newsletter {
+  background: url(../images/newsletterbg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .newsletter .newsletter-title {
+  font-weight: 800;
+  font-size: 48px;
+  text-align: left;
+  color: white;
+}
+body .newsletter .form-control {
+  border-radius: 30px !important;
+  max-width: 350px;
+  padding: 13px 24px !important;
+  font-size: 14px !important;
+  font-weight: 200px !important;
+  font-style: italic;
+  margin-right: 25px;
+}
+body .newsletter .sendbtn {
+  background-color: #08d7bd;
+  color: white;
+  border: none;
+  padding: 13px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+body .newsletter .sendbtn:hover {
+  opacity: 0.7;
+}
+body .contact-us {
+  padding-top: 100px;
+}
+body .contact-us .contact-title {
+  font-weight: 800;
+  font-size: 48px;
+  text-align: center;
+  color: var(--black);
+}
+body .contact-us .subtext {
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+  color: #363636;
+  line-height: 28px;
+}
+body .contact-us form .form-label {
+  font-weight: 700 !important;
+  font-size: 14px;
+  line-height: 24px;
+  color: #363636;
+}
+body .contact-us form .form-control {
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 300;
+}
+body .contact-us form textarea {
+  border-radius: 20px !important;
+}
+body footer {
+  background-color: var(--black);
+}
+body footer .footer-links-title {
+  color: var(--white);
+}
+body footer .form-control {
+  background-color: transparent !important;
+  color: white !important;
+}
+body footer .form-control::-moz-placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+body footer .form-control:-ms-input-placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+body footer .form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+body footer .footer-links {
+  font-weight: 200;
+  font-size: 15px;
+  color: rgb(228, 227, 227);
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+body footer .footer-links:hover {
+  color: var(--orange2);
+}
+body footer .form-control.shadow-0:focus {
+  box-shadow: none;
+}
+body footer .social-icon {
+  width: 28px;
+}
+body footer .social-icon:hover {
+  opacity: 0.8;
+}
+body footer .copywrites {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 15px;
+  background-color: rgb(48, 48, 48);
+}/*# sourceMappingURL=styles.css.map */

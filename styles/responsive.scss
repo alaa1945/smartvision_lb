@@ -1,0 +1,46 @@
+@media (max-width: 969px) {
+  body {
+    .header-area {
+      .nav-area {
+        padding: 10px 40px !important;
+        .mobile-menu {
+          width: 29px;
+          display: block !important;
+          z-index: 1100;
+          cursor: pointer;
+        }
+        .nav-list {
+          display: none !important;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
+          background-color: black;
+          right: 0;
+          top: 0;
+          width: 100%;
+          height: 100vh;
+          z-index: 1000;
+          text-align: center;
+
+          li {
+            padding-right: 30px;
+            padding-bottom: 32px;
+            a {
+              color: white !important;
+              &::after {
+                bottom: -10px !important;
+              }
+            }
+          }
+          #requestBtn {
+            margin-top: 20px;
+          }
+          &.active {
+            display: flex !important;
+          }
+        }
+      }
+    }
+  }
+}
