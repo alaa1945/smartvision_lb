@@ -1,6 +1,6 @@
 @media (max-width: 969px) {
   body .header-area .nav-area {
-    padding: 10px 40px !important;
+    padding: 30px 20px 15px 20px !important;
   }
   body .header-area .nav-area .mobile-menu {
     width: 29px;
@@ -37,5 +37,30 @@
   }
   body .header-area .nav-area .nav-list.active {
     display: flex !important;
+  }
+  body .hero-section .hero-intro {
+    padding-left: 10px;
+  }
+  body .services .service {
+    max-width: 400px;
+    margin: 0 auto 40px;
+  }
+  body .services .service .service-icon {
+    margin-bottom: auto;
+  }
+  body .services .second-services {
+    margin-top: 0px !important;
+  }
+  body .why-choose-us .work {
+    margin-bottom: 70px !important;
+  }
+  body .why-choose-us .work img {
+    margin-bottom: 15px !important;
+  }
+  body .why-choose-us .work .subtext {
+    margin-bottom: 10px;
+  }
+  body footer {
+    padding-right: 10px;
   }
 }/*# sourceMappingURL=responsive.css.map */

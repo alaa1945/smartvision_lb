@@ -2,7 +2,7 @@
   body {
     .header-area {
       .nav-area {
-        padding: 10px 40px !important;
+        padding: 30px 20px 15px 20px !important;
         .mobile-menu {
           width: 29px;
           display: block !important;
@@ -42,5 +42,37 @@
         }
       }
     }
+    .hero-section {
+      .hero-intro{
+padding-left: 10px;
+      }
+    }
+    .services{
+      .service{
+        
+        max-width: 400px;
+        margin: 0 auto 40px;
+        .service-icon{
+          margin-bottom: auto;
+        }
+      }
+      .second-services {
+        margin-top: 0px!important;
+      }
+    }
+    .why-choose-us{
+    .work{
+      margin-bottom: 70px!important;
+      img{
+        margin-bottom: 15px!important;
+      }
+      .subtext{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  footer{
+    padding-right: 10px;
+  }
   }
 }
