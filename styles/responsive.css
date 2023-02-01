@@ -1,6 +1,6 @@
 @media (max-width: 969px) {
   body .header-area .nav-area {
-    padding: 30px 20px 15px 20px !important;
+    padding: 14px 20px 0px 20px !important;
   }
   body .header-area .nav-area .mobile-menu {
     width: 29px;
@@ -59,8 +59,5 @@
   }
   body .why-choose-us .work .subtext {
     margin-bottom: 10px;
-  }
-  body footer {
-    padding-left: 23px !important;
   }
 }/*# sourceMappingURL=responsive.css.map */

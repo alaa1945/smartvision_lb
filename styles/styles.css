@@ -285,7 +285,7 @@ body .about-us .aboutBtn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  min-width: 150px;
+  min-width: 170px;
   display: block;
 }
 body .newsletter {
