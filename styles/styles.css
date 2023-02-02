@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 255, 0, 0) !important;
 }
 
 :root {
@@ -41,6 +40,70 @@
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+}
+body #preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  position: fixed;
+  background-color: var(--bg-color);
+}
+body #preloader .sk-circle {
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background: var(--dark-purple);
+  border-radius: 100%;
+  left: -18px;
+  animation: sk 1.2s infinite ease-in-out;
+  -webkit-animation: sk 1.2s infinite ease-in-out;
+  -moz-animation: sk 1.2s infinite ease-in-out;
+  -ms-animation: sk 1.2s infinite ease-in-out;
+  -o-animation: sk 1.2s infinite ease-in-out;
+}
+body #preloader .spinner {
+  margin: auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+body #preloader .spinner > div {
+  background: var(--orange2);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+body #preloader .spinner .rect1 {
+  background: var(--light-purple);
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+body #preloader .spinner .rect2 {
+  background: var(--dark-purple);
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+body #preloader .spinner .rect3 {
+  background: var(--light-purple);
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+body #preloader .spinner .rect4 {
+  background: var(--dark-purple);
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+body #preloader .spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+  background: var(--light-purple);
 }
 body ul {
   padding-left: 0 !important;
@@ -327,7 +390,7 @@ body .about-us .aboutBtn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  min-width: 170px;
+  min-width: 180px;
   display: block;
 }
 body .newsletter {
