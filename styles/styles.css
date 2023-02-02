@@ -99,6 +99,9 @@ body .header-area .nav-area .nav-list li a.activeLink::after {
   transform-origin: bottom left;
   transition: transform 0.25s ease-out;
 }
+body .header-area .nav-area .nav-list li a.active {
+  color: var(--dark-purple);
+}
 body .header-area .nav-area .menu-trigger {
   display: none;
 }
