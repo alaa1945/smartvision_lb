@@ -51,7 +51,7 @@
               <img src="./images/mobile-menu.svg" class="mobile-menu" alt="mobile menu">
               <ul class="nav-list">
                 <li>
-                  <a href="./index.html" class="nav-links activeLink">Home</a>
+                  <a href="./index.html" class="nav-links ">Home</a>
                 </li>
                 <li>
                   <a href="./services.html" class="nav-links active">Services</a>
@@ -60,7 +60,7 @@
                   <a href="./portfolio.html" class="nav-links">Portfolio</a>
                 </li>
                 <li>
-                  <a href="./contact.html">Contact Us</a>
+                  <a href="./contact.html" class="nav-links ">Contact Us</a>
                 </li>
               </ul>
             </nav>
@@ -91,12 +91,7 @@
             <div class="col-lg-12">
               <div class="row mb-lg-5">
                 <!-- Web design -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-               
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/webdesign.png" alt="webdesign icon" class="service-icon">
                     <div>
@@ -106,12 +101,7 @@
                   </div>
                 </div>
                 <!-- Web development -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                 
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/webdev.png" alt="webdev icon" class="service-icon">
                     <div>
@@ -121,12 +111,7 @@
                   </div>
                 </div>
                 <!-- Shopify Website -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/shopify.png" alt="shopifyweb icon" class="service-icon">
                     <div>
@@ -138,12 +123,7 @@
               </div>
               <div class="row second-services">
                 <!-- Rebranding -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/branding.png" alt="branding icon" class="service-icon">
                     <div>
@@ -153,12 +133,7 @@
                   </div>
                 </div>
                 <!-- SEO -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/seo.png" alt="branding icon" class="service-icon">
                     <div>
@@ -198,39 +173,45 @@
           </div>
         </div>
       </div>
-      <!-- newsletter -->
-      <div class="newsletter">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
+          <!-- newsletter -->
+          <div class="newsletter">
+            <div class="container">
               <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                  <h2 class="newsletter-title">Subscribe to our newsletter!</h2>
-                </div>
-                <div class="col-lg-6 mt-4" data-aos="fade-left">
-                  <div class="p-1 rounded">
-                    <form action="">
-                      <div class="input-group">
-                        <input
-                          type="email"
-                          placeholder="Enter your email address"
-                          aria-describedby="button-addon1"
-                          class="form-control border-0 rounded-5"
-                        >
-                        <div class="input-group-append">
-                          <button id="button-addon1" type="submit" class="sendbtn">
-                            Send
-                          </button>
-                        </div>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h2 class="newsletter-title">Subscribe to our newsletter!</h2>
+                    </div>
+                    <div class="col-lg-6 mt-4">
+                      <div class="p-1 rounded">
+                        <form action="./phpfiles/ind.php" method="post">
+                          <div class="input-group">
+                            <input
+                              type="email"
+                              placeholder="Enter your email address"
+                              aria-describedby="button-addon1"
+                              class="form-control border-0 rounded-5"
+                              name="newsEmail"
+                            >
+                            <div class="input-group-append">
+                              <button
+                                id="button-addon1"
+                                name="sendNews"
+                                type="submit"
+                                class="sendbtn"
+                              >
+                                Send
+                              </button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </main>
     <footer>
       <div class="container py-5 px-4">
@@ -287,19 +268,27 @@
             <h6 class="footer-links-title mb-4">Newsletter</h6>
             <p class="footer-links mb-4">Subscribe to our newsletter for updates and exclusive offers.</p>
             <div class="p-1 rounded border">
-              <div class="input-group">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  aria-describedby="button-addon1"
-                  class="form-control border-0 shadow-0"
-                >
-                <div class="input-group-append">
-                  <button id="button-addon1" type="submit" class="btn btn-link">
-                    <img src="./images/sendEmail.png" alt="sendEmail">
-                  </button>
+              <form action="./phpfiles/ind.php" method="post">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="newsEmail"
+                    placeholder="Enter your email address"
+                    aria-describedby="button-addon1"
+                    class="form-control border-0 shadow-0"
+                  >
+                  <div class="input-group-append">
+                    <button
+                      id="button-addon1"
+                      name="sendNews"
+                      type="submit"
+                      class="btn btn-link"
+                    >
+                      <img src="./images/sendEmail.png" alt="sendEmail">
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -316,7 +305,7 @@
     <script>
          AOS.init();
     </script>
-     <script>
+    <script>
       let loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";

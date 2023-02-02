@@ -227,15 +227,15 @@
       <div class="newsletter">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" data-aos="fade-up">
               <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6">
                   <h2 class="newsletter-title">Subscribe to our newsletter!</h2>
                 </div>
                 <div class="col-lg-6 mt-4">
                   <div class="p-1 rounded">
                     <form action="./phpfiles/ind.php" method="post">
-                      <div class="input-group" data-aos="fade-left">
+                      <div class="input-group">
                         <input
                           type="email"
                           placeholder="Enter your email address"
@@ -244,7 +244,7 @@
                           name="newsEmail"
                         >
                         <div class="input-group-append">
-                          <button id="button-addon1" type="submit" class="sendbtn">
+                          <button id="button-addon1"   name="sendNews" type="submit" class="sendbtn">
                             Send
                           </button>
                         </div>
@@ -313,19 +313,27 @@
             <h6 class="footer-links-title mb-4">Newsletter</h6>
             <p class="footer-links mb-4">Subscribe to our newsletter for updates and exclusive offers.</p>
             <div class="p-1 rounded border">
-              <div class="input-group">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  aria-describedby="button-addon1"
-                  class="form-control border-0 shadow-0"
-                >
-                <div class="input-group-append">
-                  <button id="button-addon1" type="submit" class="btn btn-link">
-                    <img src="./images/sendEmail.png" alt="sendEmail">
-                  </button>
+              <form action="./phpfiles/ind.php" method="post">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="newsEmail"
+                    placeholder="Enter your email address"
+                    aria-describedby="button-addon1"
+                    class="form-control border-0 shadow-0"
+                  >
+                  <div class="input-group-append">
+                    <button
+                      id="button-addon1"
+                      name="sendNews"
+                      type="submit"
+                      class="btn btn-link"
+                    >
+                      <img src="./images/sendEmail.png" alt="sendEmail">
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

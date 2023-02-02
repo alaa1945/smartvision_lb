@@ -390,7 +390,8 @@ body .about-us .aboutBtn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  min-width: 194px;
+  min-width: 140px;
+  font-size: 16px;
   display: block;
 }
 body .newsletter {
