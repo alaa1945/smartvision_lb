@@ -75,29 +75,17 @@ body .header-area .nav-area .nav-list {
   padding-top: 6px;
 }
 body .header-area .nav-area .nav-list li {
-  padding-left: 25px;
+  padding-left: 50px;
 }
 body .header-area .nav-area .nav-list li a {
   font-style: normal;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--black);
   position: relative;
 }
 body .header-area .nav-area .nav-list li a:hover {
   color: var(--dark-purple);
-}
-body .header-area .nav-area .nav-list li a.activeLink::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(1);
-  height: 2.3px;
-  bottom: -7px;
-  left: 0;
-  background-color: var(--primary-color);
-  transform-origin: bottom left;
-  transition: transform 0.25s ease-out;
 }
 body .header-area .nav-area .nav-list li a.active {
   color: var(--dark-purple);

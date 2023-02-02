@@ -68,10 +68,10 @@ body {
         margin-bottom: 0;
         padding-top: 6px;
         li {
-          padding-left: 25px;
+          padding-left: 50px;
           a {
             font-style: normal;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 500;
 
             color: var(--black);
@@ -81,20 +81,20 @@ body {
             &:hover {
               color: var(--dark-purple);
             }
-            &.activeLink {
-              &::after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                transform: scaleX(1);
-                height: 2.3px;
-                bottom: -7px;
-                left: 0;
-                background-color: var(--primary-color);
-                transform-origin: bottom left;
-                transition: transform 0.25s ease-out;
-              }
-            }
+            // &.activeLink {
+            //   &::after {
+            //     content: "";
+            //     position: absolute;
+            //     width: 100%;
+            //     transform: scaleX(1);
+            //     height: 2.3px;
+            //     bottom: -7px;
+            //     left: 0;
+            //     background-color: var(--primary-color);
+            //     transform-origin: bottom left;
+            //     transition: transform 0.25s ease-out;
+            //   }
+            // }
             &.active{
               color: var(--dark-purple);
             }
