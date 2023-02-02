@@ -1,9 +1,6 @@
 @media (max-width: 969px) {
-  body .header-area {
-    overflow-x: hidden;
-  }
   body .header-area .nav-area {
-    padding: 14px 20px 0px 20px !important;
+    padding: 16px 20px 0px 20px !important;
   }
   body .header-area .nav-area .mobile-menu {
     width: 29px;
