@@ -6,12 +6,13 @@ const mobile_navlinks = document.querySelectorAll(".nav-links");
 
 // show nav on btn click
 mobile_menu.addEventListener("click", function () {
-  mobile_navlist.classList.toggle("active");
+  mobile_navlist.classList.toggle("activeNav");
+  document.body.style.overflowY="hidden";  
   closeIcon();
 });
 mobile_navlinks.forEach((link) => {
   link.addEventListener("click", function () {
-    mobile_navlist.classList.toggle("active");
+    mobile_navlist.classList.toggle("activeNav");
     closeIcon();
   });
 });
@@ -25,9 +26,10 @@ document.addEventListener("scroll", () => {
   }
 });
 function closeIcon() {
-  if (mobile_navlist.classList.contains("active")) {
+  if (mobile_navlist.classList.contains("activeNav")) {
     mobile_menu.src = "images/close-icon.svg";
   } else {
+    document.body.style.overflowY="visible";
     mobile_menu.src = "images/mobile-menu.svg";
   }
 }

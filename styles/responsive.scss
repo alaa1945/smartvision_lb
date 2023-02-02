@@ -25,51 +25,48 @@
 
           li {
             padding-right: 30px;
-            padding-bottom: 32px;
+            padding-bottom: 50px;
             a {
               color: white !important;
-              &::after {
-                bottom: -10px !important;
+              &:hover {
+                color: var(--dark-purple)!important;
               }
             }
           }
-          #requestBtn {
-            margin-top: 20px;
-          }
-          &.active {
+        
+          &.activeNav {
             display: flex !important;
           }
         }
       }
     }
     .hero-section {
-      .hero-intro{
-padding-left: 10px;
+      .hero-intro {
+        padding-left: 10px;
       }
     }
-    .services{
-      .service{
-        
+    .services {
+      .service {
         max-width: 400px;
         margin: 0 auto 40px;
-        .service-icon{
+        .service-icon {
           margin-bottom: auto;
         }
       }
       .second-services {
-        margin-top: 0px!important;
+        margin-top: 0px !important;
       }
     }
-    .why-choose-us{
-    .work{
-      margin-bottom: 70px!important;
-      img{
-        margin-bottom: 15px!important;
-      }
-      .subtext{
-        margin-bottom: 10px;
+    .why-choose-us {
+      .work {
+        margin-bottom: 70px !important;
+        img {
+          margin-bottom: 15px !important;
+        }
+        .subtext {
+          margin-bottom: 10px;
+        }
       }
     }
-  }
   }
 }

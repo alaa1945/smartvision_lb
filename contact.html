@@ -30,6 +30,18 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
+    <div id="preloader">
+      <div class="box">
+        <div class="sk-circle"></div>
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
     <header class="header-area">
       <div class="container">
         <div class="row">
@@ -81,26 +93,25 @@
               <!--form -->
               <div class="row justify-content-center">
                 <div class="col-lg-7 mb-5">
-                  <form action="#" class="p-5">
+                  <form action="./phpfiles/ind.php" method="post" class="p-5">
                     <div class="row form-group mb-4">
                       <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="form-label mb-2" for="fname">First Name</label>
+                        <label class="form-label mb-2" for="fname">Name</label>
                         <input
                           type="text"
-                          id="fname"
+                          name="name"
                           class="form-control"
                           placeholder="Enter first name"
                           required
                         >
                       </div>
                       <div class="col-md-6">
-                        <label class="form-label mb-2" for="lname">Last Name</label>
+                        <label class="form-label mb-2" for="lname">Phone number</label>
                         <input
                           type="text"
-                          id="lname"
+                          name="number"
                           class="form-control"
-                          placeholder="Enter last name"
-                          required
+                          placeholder="Enter your phone number"
                         >
                       </div>
                     </div>
@@ -109,7 +120,7 @@
                         <label class="form-label mb-2" for="email">Email</label>
                         <input
                           type="email"
-                          id="email"
+                          name="email"
                           class="form-control"
                           placeholder="Enter Email"
                           required
@@ -121,7 +132,7 @@
                         <label class="form-label mb-2" for="subject">Subject</label>
                         <input
                           type="subject"
-                          id="subject"
+                          name="subject"
                           class="form-control"
                           placeholder="Enter Subject"
                           required
@@ -133,7 +144,6 @@
                         <label class="form-label mb-2" for="message">Message</label>
                         <textarea
                           name="message"
-                          id="message"
                           cols="30"
                           rows="7"
                           class="form-control"
@@ -144,7 +154,7 @@
                     </div>
                     <div class="row form-group mb-4">
                       <div class="col-md-3">
-                        <button type="submit" class="cta sendBtn btn mt-4">Send</button>
+                        <button type="submit" name="send" class="cta sendBtn btn mt-4">Send</button>
                       </div>
                     </div>
                   </form>
@@ -239,5 +249,12 @@
     <script>
          AOS.init();
     </script>
+     <script>
+      let loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+    </script>
+    
   </body>
 </html>

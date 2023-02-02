@@ -24,18 +24,15 @@
   }
   body .header-area .nav-area .nav-list li {
     padding-right: 30px;
-    padding-bottom: 32px;
+    padding-bottom: 50px;
   }
   body .header-area .nav-area .nav-list li a {
     color: white !important;
   }
-  body .header-area .nav-area .nav-list li a::after {
-    bottom: -10px !important;
+  body .header-area .nav-area .nav-list li a:hover {
+    color: var(--dark-purple) !important;
   }
-  body .header-area .nav-area .nav-list #requestBtn {
-    margin-top: 20px;
-  }
-  body .header-area .nav-area .nav-list.active {
+  body .header-area .nav-area .nav-list.activeNav {
     display: flex !important;
   }
   body .hero-section .hero-intro {

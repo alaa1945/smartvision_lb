@@ -41,6 +41,70 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+body #preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  position: fixed;
+  background-color: var(--bg-color);
+}
+body #preloader .sk-circle {
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background: var(--dark-purple);
+  border-radius: 100%;
+  left: -18px;
+  animation: sk 1.2s infinite ease-in-out;
+  -webkit-animation: sk 1.2s infinite ease-in-out;
+  -moz-animation: sk 1.2s infinite ease-in-out;
+  -ms-animation: sk 1.2s infinite ease-in-out;
+  -o-animation: sk 1.2s infinite ease-in-out;
+}
+body #preloader .spinner {
+  margin: auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+body #preloader .spinner > div {
+  background: var(--orange2);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+body #preloader .spinner .rect1 {
+  background: var(--light-purple);
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+body #preloader .spinner .rect2 {
+  background: var(--dark-purple);
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+body #preloader .spinner .rect3 {
+  background: var(--light-purple);
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+body #preloader .spinner .rect4 {
+  background: var(--dark-purple);
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+body #preloader .spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+  background: var(--light-purple);
+}
 body ul {
   padding-left: 0 !important;
   list-style: none;
@@ -79,7 +143,7 @@ body .header-area .nav-area .nav-list li {
 }
 body .header-area .nav-area .nav-list li a {
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--black);
   position: relative;
@@ -446,4 +510,111 @@ body footer .copywrites {
   font-weight: 200;
   font-size: 15px;
   background-color: rgb(48, 48, 48);
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+@-webkit-keyframes sk {
+  1% {
+    top: -15px;
+    background: #fff;
+  }
+  2% {
+    top: 10px;
+  }
+  5% {
+    top: -20px;
+  }
+  10% {
+    left: -10px;
+  }
+  20% {
+    top: -25px;
+  }
+  30% {
+    left: 15px;
+    background: var(--light-purple);
+  }
+  35% {
+    top: 5px;
+  }
+  45% {
+    top: -5px;
+  }
+  50% {
+    top: -5px;
+  }
+  60% {
+    top: -6px;
+  }
+  70% {
+    top: 6px;
+  }
+  80% {
+    top: 6px;
+  }
+  60% {
+    top: -6px;
+    background: var(--parag-color);
+  }
+}
+@keyframes sk {
+  1% {
+    top: -15px;
+    background: #fff;
+  }
+  2% {
+    top: 10px;
+  }
+  5% {
+    top: -20px;
+  }
+  10% {
+    left: -10px;
+  }
+  20% {
+    top: -25px;
+  }
+  30% {
+    left: 15px;
+    background: var(--light-purple);
+  }
+  35% {
+    top: 5px;
+  }
+  45% {
+    top: -5px;
+  }
+  50% {
+    top: -5px;
+  }
+  60% {
+    top: -6px;
+  }
+  70% {
+    top: 6px;
+  }
+  80% {
+    top: 6px;
+  }
+  60% {
+    top: -6px;
+    background: var(--parag-color);
+  }
 }/*# sourceMappingURL=styles.css.map */

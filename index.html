@@ -30,6 +30,18 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
+    <div id="preloader">
+      <div class="box">
+        <div class="sk-circle"></div>
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+    </div>
     <header class="header-area">
       <div class="container">
         <div class="row">
@@ -79,12 +91,7 @@
             <div class="col-lg-12">
               <div class="row mb-lg-5">
                 <!-- Web design -->
-                <div
-                  class="col-lg-4"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="400"
-                >
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                   <div class="service">
                     <img src="./images/webdesign.png" alt="webdesign icon" class="service-icon">
                     <div>
@@ -328,16 +335,22 @@
                 </div>
                 <div class="col-lg-6 mt-4" data-aos="fade-left">
                   <div class="p-1 rounded">
-                    <form action="">
+                    <form action="./phpfiles/ind.php" method="post">
                       <div class="input-group">
                         <input
                           type="email"
                           placeholder="Enter your email address"
                           aria-describedby="button-addon1"
                           class="form-control border-0 rounded-5"
+                          name="newsEmail"
                         >
                         <div class="input-group-append">
-                          <button id="button-addon1" type="submit" class="sendbtn">
+                          <button
+                            id="button-addon1"
+                            name="sendNews"
+                            type="submit"
+                            class="sendbtn"
+                          >
                             Send
                           </button>
                         </div>
@@ -360,26 +373,25 @@
               <!--form -->
               <div class="row justify-content-center">
                 <div class="col-lg-7 mb-5">
-                  <form action="http://localhost/smartvisionlb/phpfiles/ind.php" method="post" class="p-5">
+                  <form action="./phpfiles/ind.php" method="post" class="p-5">
                     <div class="row form-group mb-4">
                       <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="form-label mb-2" for="fname">First Name</label>
+                        <label class="form-label mb-2" for="fname">Name</label>
                         <input
                           type="text"
-                          id="fname"
+                          name="name"
                           class="form-control"
                           placeholder="Enter first name"
                           required
                         >
                       </div>
                       <div class="col-md-6">
-                        <label class="form-label mb-2" for="lname">Last Name</label>
+                        <label class="form-label mb-2" for="lname">Phone number</label>
                         <input
                           type="text"
-                          id="lname"
+                          name="number"
                           class="form-control"
-                          placeholder="Enter last name"
-                          required
+                          placeholder="Enter your phone number"
                         >
                       </div>
                     </div>
@@ -388,7 +400,7 @@
                         <label class="form-label mb-2" for="email">Email</label>
                         <input
                           type="email"
-                          id="email"
+                          name="email"
                           class="form-control"
                           placeholder="Enter Email"
                           required
@@ -400,7 +412,7 @@
                         <label class="form-label mb-2" for="subject">Subject</label>
                         <input
                           type="subject"
-                          id="subject"
+                          name="subject"
                           class="form-control"
                           placeholder="Enter Subject"
                           required
@@ -412,7 +424,6 @@
                         <label class="form-label mb-2" for="message">Message</label>
                         <textarea
                           name="message"
-                          id="message"
                           cols="30"
                           rows="7"
                           class="form-control"
@@ -423,7 +434,7 @@
                     </div>
                     <div class="row form-group mb-4">
                       <div class="col-md-3">
-                        <button type="submit" class="cta sendBtn btn mt-4">Send</button>
+                        <button type="submit" name="send" class="cta sendBtn btn mt-4">Send</button>
                       </div>
                     </div>
                   </form>
@@ -489,19 +500,27 @@
             <h6 class="footer-links-title mb-4">Newsletter</h6>
             <p class="footer-links mb-4">Subscribe to our newsletter for updates and exclusive offers.</p>
             <div class="p-1 rounded border">
-              <div class="input-group">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  aria-describedby="button-addon1"
-                  class="form-control border-0 shadow-0"
-                >
-                <div class="input-group-append">
-                  <button id="button-addon1" type="submit" class="btn btn-link">
-                    <img src="./images/sendEmail.png" alt="sendEmail">
-                  </button>
+              <form action="./phpfiles/ind.php" method="post">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    name="newsEmail"
+                    placeholder="Enter your email address"
+                    aria-describedby="button-addon1"
+                    class="form-control border-0 shadow-0"
+                  >
+                  <div class="input-group-append">
+                    <button
+                      id="button-addon1"
+                      name="sendNews"
+                      type="submit"
+                      class="btn btn-link"
+                    >
+                      <img src="./images/sendEmail.png" alt="sendEmail">
+                    </button>
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -517,6 +536,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      let loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
     </script>
   </body>
 </html>
